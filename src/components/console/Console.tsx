@@ -7,8 +7,6 @@ import Price from './Price';
 import Type from './Type';
 
 export default function Console() {
-  const { property, setProperty } = useProperty();
-
   return (
     <Wrapper>
       <Type />
@@ -21,10 +19,9 @@ export default function Console() {
 }
 
 const Wrapper = styled.div`
-  width: 210mm;
+  min-width: 210mm;
   min-height: 296mm;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  background-color: #fae2e2;
+  gap: 40px;
 `;

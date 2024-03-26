@@ -8,7 +8,7 @@ import React, {
 
 interface Property {
   price: string;
-  type: number;
+  type: string;
   apt: number;
   desc: string;
   area: string;
@@ -35,7 +35,7 @@ export const PropertyProvider: React.FC<PropertyProviderProps> = ({
 }) => {
   const [property, setProperty] = useState<Property>({
     price: '금액',
-    type: 0,
+    type: '매매',
     apt: 0,
     desc: '매물정보',
     area: '25',

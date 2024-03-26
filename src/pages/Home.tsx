@@ -13,7 +13,6 @@ export default function Home() {
 
 const Wrapper = styled.div`
   display: flex;
-  gap: 100px;
   align-items: center;
   padding: 40px 60px;
   background-color: #f5f3f3;
