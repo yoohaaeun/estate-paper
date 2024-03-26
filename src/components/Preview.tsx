@@ -1,6 +1,9 @@
 import styled from 'styled-components';
+import { useProperty } from '../context/PropertyContext';
 
 export default function Preview() {
+  const { property } = useProperty();
+
   return <Wrapper>Preview</Wrapper>;
 }
 

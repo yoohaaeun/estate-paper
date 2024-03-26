@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useProperty } from '../../context/PropertyContext';
 import Apt from './Apt';
 import Area from './Area';
 import Description from './Description';
@@ -6,6 +7,8 @@ import Price from './Price';
 import Type from './Type';
 
 export default function Console() {
+  const { property, setProperty } = useProperty();
+
   return (
     <Wrapper>
       <Type />
