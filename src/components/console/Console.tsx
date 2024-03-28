@@ -1,10 +1,8 @@
 import styled from 'styled-components';
-import { useProperty } from '../../context/PropertyContext';
+import Type from './Type';
 import Apt from './Apt';
 import Area from './Area';
-import Description from './Description';
-import Price from './Price';
-import Type from './Type';
+import Info from './Info';
 
 export default function Console() {
   return (
@@ -12,8 +10,7 @@ export default function Console() {
       <Type />
       <Apt />
       <Area />
-      <Description />
-      <Price />
+      <Info />
     </Wrapper>
   );
 }
@@ -23,5 +20,5 @@ const Wrapper = styled.div`
   min-height: 296mm;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
 `;
