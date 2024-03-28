@@ -15,9 +15,6 @@ interface Property {
   supplyArea: string;
   exclusiveArea: string;
   custom: boolean;
-  customApt: string;
-  customSupplyArea: string;
-  customExclusiveArea: string;
 }
 
 interface PropertyContextType {
@@ -45,9 +42,6 @@ export const PropertyProvider: React.FC<PropertyProviderProps> = ({
     supplyArea: '85.02',
     exclusiveArea: '59.79',
     custom: false,
-    customApt: '',
-    customSupplyArea: '',
-    customExclusiveArea: '',
   });
 
   return (
