@@ -59,6 +59,7 @@ const Button = styled.button<{ selected: boolean }>`
   font-weight: 600;
   color: #4b495c;
   background: #f6f7fb;
+  cursor: pointer;
 
   ${(props) =>
     props.selected &&
