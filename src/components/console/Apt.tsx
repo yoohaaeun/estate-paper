@@ -13,6 +13,7 @@ export default function Apt(): JSX.Element {
       ...property,
       apt: name,
       custom: false,
+      area: areas[0].area,
       supplyArea: areas[0].supply_area,
       exclusiveArea: areas[0].exclusive_area,
     });
