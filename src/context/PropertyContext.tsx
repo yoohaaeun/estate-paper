@@ -9,12 +9,15 @@ import React, {
 interface Property {
   price: string;
   type: string;
-  apt: number;
+  apt: string;
   desc: string;
   area: string;
+  supplyArea: string;
+  exclusiveArea: string;
+  custom: boolean;
   customApt: string;
   customSupplyArea: string;
-  customPrivateArea: string;
+  customExclusiveArea: string;
 }
 
 interface PropertyContextType {
@@ -36,12 +39,15 @@ export const PropertyProvider: React.FC<PropertyProviderProps> = ({
   const [property, setProperty] = useState<Property>({
     price: '금액',
     type: '매매',
-    apt: 0,
+    apt: '엑슬루타워',
     desc: '매물정보',
     area: '25',
+    supplyArea: '85.02',
+    exclusiveArea: '59.79',
+    custom: false,
     customApt: '',
     customSupplyArea: '',
-    customPrivateArea: '',
+    customExclusiveArea: '',
   });
 
   return (
