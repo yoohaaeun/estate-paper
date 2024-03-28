@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { useProperty } from '../../context/PropertyContext';
+import { Title } from '../CommonStyles';
 
 const types = [
   { name: '매매', color: '#C1DDF7' },
@@ -26,7 +27,7 @@ export default function Type() {
             key={index}
             onClick={() => handleType(type.name)}
             color={type.color}
-            isSelected={property.type === type.name}
+            selected={property.type === type.name}
           >
             {type.name}
           </Button>
@@ -36,21 +37,12 @@ export default function Type() {
   );
 }
 
-const Title = styled.h3`
-  margin: 0;
-  font-size: 25px;
-  line-height: 47px;
-  font-weight: 700;
-  color: #7c7c7c;
-  margin-bottom: 10px;
-`;
-
 const Buttons = styled.div`
   display: flex;
   gap: 30px;
 `;
 
-const Button = styled.button<{ isSelected: boolean }>`
+const Button = styled.button<{ selected: boolean }>`
   width: 160px;
   height: 60px;
   font-size: 25px;
@@ -67,7 +59,7 @@ const Button = styled.button<{ isSelected: boolean }>`
     `}
 
   ${(props) =>
-    props.isSelected &&
+    props.selected &&
     css`
       outline: none;
       border: 2px solid #4b495c;
