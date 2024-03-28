@@ -1,11 +1,12 @@
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { useProperty } from '../context/PropertyContext';
 
-export default function Preview() {
+const Preview = forwardRef<HTMLDivElement>((props, ref) => {
   const { property } = useProperty();
 
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <Name>{property.apt}</Name>
       <Type type={property.type}>{property.type}</Type>
       <Area>
@@ -21,7 +22,7 @@ export default function Preview() {
       <Logo />
     </Wrapper>
   );
-}
+});
 
 const Wrapper = styled.div`
   position: relative;
@@ -111,3 +112,5 @@ const Logo = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 `;
+
+export default Preview;
