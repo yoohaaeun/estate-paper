@@ -9,17 +9,21 @@ const Preview = forwardRef<HTMLDivElement>((props, ref) => {
     <Wrapper ref={ref}>
       <Name>{property.apt}</Name>
       <Type type={property.type}>{property.type}</Type>
-      {property.custom ? (
-        <Area>
-          <span>{property.supplyArea}</span>
-          <span>{property.exclusiveArea}</span>
-        </Area>
-      ) : (
-        <Area>
-          <span>공급 {property.supplyArea}㎡</span>
-          <span>전용 {property.exclusiveArea}㎡</span>
-        </Area>
-      )}
+      <Area>
+        {property.custom ? (
+          <>
+            {property.supplyArea && <span>공급 {property.supplyArea}㎡</span>}
+            {property.exclusiveArea && (
+              <span>전용 {property.exclusiveArea}㎡</span>
+            )}
+          </>
+        ) : (
+          <>
+            <span>공급 {property.supplyArea}㎡</span>
+            <span>전용 {property.exclusiveArea}㎡</span>
+          </>
+        )}
+      </Area>
       <Description>{property.desc}</Description>
       <Price>{property.price}</Price>
       <Banner>
