@@ -1,46 +1,10 @@
-# Getting Started with Create React App
+# 부동산 매물장 만들기
+"부동산 매물장 만들기"는 부동산 업무에서 빈번히 작성되는 매물장을 보다 쉽고 편하게 만들 수 있는 기능을 제공합니다. 간단하게 조작 가능한 UI와 프린트 기능을 통해 매물장을 출력할 수 있습니다.
+<img width="2032" alt="부동산 매물장 만들기" src="https://github.com/yoohaaeun/estate-paper/assets/101792909/1bd64d78-0d93-4f05-bd53-23c53e1ccea0">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **상태 공유를 위한 콘텍스트 활용**
+    - 여러 컴포넌트에서 동일한 상태 데이터를 사용할 수 있도록 콘텍스트를 활용하였습니다. 이를 통해 코드를 간결하게 유지하고, 컴포넌트 간의 데이터 전달을 단순화하여 효율적인 상태 공유를 하였습니다.
+- **매물 설정 및 미리보기**
+    - 사용자가 자주 사용하는 매물의 정보를 미리 저장해두어 매물의 타입, 단지, 면적을 선택하고 매물의 정보를 작성할 수 있습니다. 또한, 사용자가 직접 매물의 정보를 입력할 수 있으며, 설정한 매물은 프리뷰를 통해 실시간으로 확인할 수 있습니다.
+- **react-to-print 라이브러리** 활용
+    - react-to-print 라이브러리를 활용하여 프리뷰 구역만 프린트 되도록 설정해 사용자가 작성한 매물장을 손쉽게 공유하고 활용할 수 있도록 했습니다.
